@@ -2,7 +2,7 @@ spring:
   application:
     name: backend
   profiles:
-    active: ${SPRING_PROFILES_ACTIVE:dev}
+    active: ${SPRING_PROFILES_ACTIVE:prod}
   jpa:
     hibernate:
       ddl-auto: update
