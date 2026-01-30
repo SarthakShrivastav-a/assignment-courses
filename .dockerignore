@@ -1,0 +1,12 @@
+.git
+.gitignore
+.gitattributes
+.idea
+*.iml
+target
+.mvn
+mvnw
+mvnw.cmd
+HELP.md
+*.md
+!src/**/*.md
