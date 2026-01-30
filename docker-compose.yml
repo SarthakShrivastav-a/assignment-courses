@@ -23,6 +23,21 @@ services:
       - esdata:/usr/share/elasticsearch/data
 
 
+  app:
+    build:
+      context: .
+      args:
+        PROFILE: ${PROFILE:-prod}
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: ${PROFILE:-prod}
+      DATABASE_URL: jdbc:postgresql://postgres:5432/courseplatform
+      DB_USERNAME: postgres
+      DB_PASSWORD: 1234
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      JWT_SECRET: docker-compose-secret-key-that-is-at-least-256-bits-long-for-hs256
+
 volumes:
   pgdata:
   esdata:
