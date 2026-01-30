@@ -4,6 +4,11 @@
 
 A Spring Boot backend for a learning platform where users can browse courses, enroll, and track their progress. Built with Java 17, Spring Boot 4.0.2, PostgreSQL, Elasticsearch, and JWT authentication.
 
+### Live Deployment
+
+- **Base URL**: https://assignment-courses-production.up.railway.app/
+- **Swagger UI (API Docs)**: https://assignment-courses-production.up.railway.app/swagger-ui.html
+
 ---
 
 ## Table of Contents
@@ -25,7 +30,7 @@ A Spring Boot backend for a learning platform where users can browse courses, en
 | Technology | Purpose |
 |---|---|
 | Java 17 | Language |
-| Spring Boot 4.0.2 | Framework |
+| Spring Boot 3.4.2 | Framework |
 | Spring Data JPA / Hibernate | ORM and database access |
 | PostgreSQL 16 | Primary database |
 | Spring Security | Authentication framework |
