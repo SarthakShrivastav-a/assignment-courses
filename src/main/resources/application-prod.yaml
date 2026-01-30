@@ -10,3 +10,4 @@ spring:
 
 elasticsearch:
   url: ${ELASTICSEARCH_URL:http://localhost:9200}
+  apikey: ${ELASTICSEARCH_APIKEY:}

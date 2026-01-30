@@ -1,10 +1,13 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/courseplatform
-    username: postgres
-    password: 1234
+    url: ${DATABASE_URL}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:1234}
   jpa:
-    show-sql: true
+    hibernate:
+      ddl-auto: update
+    show-sql: false
 
 elasticsearch:
-  url: http://localhost:9200
+  url: ${ELASTICSEARCH_URL:http://localhost:9200}
+  apikey: ${ELASTICSEARCH_APIKEY:}
