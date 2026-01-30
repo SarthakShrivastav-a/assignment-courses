@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/courseplatform
+    username: postgres
+    password: postgres
+
+elasticsearch:
+  url: http://localhost:9200
