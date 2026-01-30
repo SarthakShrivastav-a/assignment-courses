@@ -2,7 +2,9 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/courseplatform
     username: postgres
-    password: postgres
+    password: 1234
+  jpa:
+    show-sql: true
 
 elasticsearch:
   url: http://localhost:9200
