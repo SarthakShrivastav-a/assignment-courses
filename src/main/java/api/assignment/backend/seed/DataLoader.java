@@ -4,6 +4,7 @@ import api.assignment.backend.entity.Course;
 import api.assignment.backend.entity.Subtopic;
 import api.assignment.backend.entity.Topic;
 import api.assignment.backend.repository.CourseRepository;
+import api.assignment.backend.service.SearchService;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -24,6 +25,7 @@ public class DataLoader implements CommandLineRunner {
 
     private final CourseRepository courseRepository;
     private final ObjectMapper objectMapper;
+    private final SearchService searchService;
 
     @Override
     public void run(String... args) {
@@ -47,6 +49,9 @@ public class DataLoader implements CommandLineRunner {
         } catch (Exception e) {
             log.error("Failed to seed data: {}", e.getMessage(), e);
         }
+
+        // indexing after data population
+        searchService.initializeElasticsearch();
     }
 
     private JsonNode loadJson() throws Exception {
