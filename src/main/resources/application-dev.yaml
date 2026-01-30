@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:1234}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+elasticsearch:
+  url: ${ELASTICSEARCH_URL:http://localhost:9200}
+  apikey: ${ELASTICSEARCH_APIKEY:}

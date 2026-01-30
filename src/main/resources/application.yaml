@@ -1,3 +1,24 @@
 spring:
   application:
     name: backend
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    show-sql: false
+  datasource:
+    driver-class-name: org.postgresql.Driver
+
+jwt:
+  secret: ${JWT_SECRET:default-dev-secret-key-that-is-at-least-256-bits-long-for-hs256}
+  expiration: 86400000
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+elasticsearch:
+  url: ${ELASTICSEARCH_URL:http://localhost:9200}
+  apikey: ${ELASTICSEARCH_APIKEY:}
