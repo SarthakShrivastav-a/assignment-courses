@@ -6,11 +6,13 @@ import api.assignment.backend.exception.ResourceNotFoundException;
 import api.assignment.backend.repository.CourseRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 public class CourseService {
 
     private final CourseRepository courseRepository;
