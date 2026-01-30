@@ -7,6 +7,8 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: false
+server:
+  forward-headers-strategy: framework
 
 elasticsearch:
   url: ${ELASTICSEARCH_URL:http://localhost:9200}
